@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_odoo_warehouse_integration" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.odoo_warehouse_integration</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='app_settings_block']" position="inside">
+                <div class="o_setting_box">
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Warehouse Integration</span>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <field name="odoo_warehouse_integration_shared_api_token" password="True"/>
+                                <label for="odoo_warehouse_integration_shared_api_token"
+                                       string="Shared API Token (X-Odoo-Token)"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
